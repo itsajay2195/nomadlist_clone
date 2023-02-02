@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    color : #1f58ba; 
+    margin: 0;
+    padding:0;
+  
+  }
+  
+  body{
+    width:100%;
+    overflow-x:hidden ;
+    background-color:#181818F2;
+  }
+  
+  a{
+    text-decoration: none;
+    /* color: #393c41; */
+  }

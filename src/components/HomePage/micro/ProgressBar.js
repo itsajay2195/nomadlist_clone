@@ -1,21 +1,19 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 
-
-const ProgressBar = () => {
+const ProgressBar = ({percentage}) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <ProgressBarContainer>
+      <Progress percentage={percentage} />
+    </ProgressBarContainer>
+  );
+};
 
-export default ProgressBar
-
+export default ProgressBar;
 
 const ProgressBarContainer = styled.div`
-  height: 100px;
-  width: 20px;
+  height: 20px;
+  width: 100px;
   background-color: #ddd;
   border-radius: 10px;
   display: flex;
@@ -23,8 +21,8 @@ const ProgressBarContainer = styled.div`
 `;
 
 const Progress = styled.div`
-  height: ${props => props.percentage}%;
-  width: 100%;
+  height: 100%;
+  width: ${(props) => props.percentage}%;
   background-color: #4caf50;
   border-radius: 10px;
 `;

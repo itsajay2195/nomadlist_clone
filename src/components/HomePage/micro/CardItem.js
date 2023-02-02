@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import ProgressBar from "./ProgressBar";
 
+const PICK_KEYS = ["cost", "overall", "fun", "safety"];
+const formrHoverData = (dataset) => {
+  let obj1 = [];
+  PICK_KEYS.reduce((acc, key) => {
+    acc["name"] = key;
+    acc[key] = dataset[key];
+    obj1.push(acc);
+    acc = {};
+    return acc;
+  }, {});
+  return obj1;
+};
 const CardItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [onHoverDataSet] = useState(formrHoverData(item));
   const handleMouseEnter = () => {
-    setIsHovered(!isHovered);
+    setIsHovered(true);
   };
   const handleMouseLeave = () => {
-    setIsHovered(!isHovered);
+    setIsHovered(false);
   };
 
   const { img } = item;
@@ -22,7 +36,11 @@ const CardItem = ({ item }) => {
       />
 
       <>
-        <DefaultItem item={item} />
+        {isHovered ? (
+          <HoveredItem onHoverDataSet={onHoverDataSet} />
+        ) : (
+          <DefaultItem item={item} />
+        )}
       </>
     </Item>
   );
@@ -30,12 +48,36 @@ const CardItem = ({ item }) => {
 
 export default CardItem;
 
-const HoverItem = ({item})=>{
-return(
-  <>
-  </>
-)
-}
+const HoveredItem = ({ onHoverDataSet }) => {
+  // console.log("onHoverDataSet11", onHoverDataSet);
+  return (
+    <HoveredItemContainer>
+      <div style={{display: 'flex', flexDirection:'column', flex:1, justifyContent: 'center'}}>
+        {onHoverDataSet.map((data, index) => (
+            <div
+              key={`${data.name}-${index}`}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent:'space-evenly',
+                padding:'10px'
+              }}
+            >
+              <div style={{display:'flex', flex:0.5, flexDirection:'row'}}>
+              <P style={{color:'white'}}>{data.name}</P>
+              <P style={{color:'white'}}>{data.name}</P>
+              </div>
+              <div >
+              <ProgressBar percentage={25} />
+              </div>
+              
+            </div>
+      
+        ))}
+      </div>
+    </HoveredItemContainer>
+  );
+};
 
 const DefaultItem = ({ item }) => {
   const { city, country, internetSpeed, rank } = item;
@@ -44,9 +86,9 @@ const DefaultItem = ({ item }) => {
       <TopItem>
         <TopLeftItem>
           {rank}
-          <div
+          <P
             style={{ height: "3px", width: "100%", backgroundColor: "white" }}
-          ></div>
+          ></P>
         </TopLeftItem>
         <TopRightItemwrapper>
           <WifiIconWrapper>
@@ -214,3 +256,13 @@ const Smiley = styled.span`
   padding: 0px 5px;
 `;
 
+const HoveredItemContainer = styled.div`
+  display: flex;
+  position: absolute;
+  flex:1;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`;

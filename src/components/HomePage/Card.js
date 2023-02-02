@@ -7,7 +7,7 @@ const Card = () => {
   return (
     <CardContainer>
       {CITIES.map((city) => (
-        <CardItem item={city}/>
+        <CardItem key={city.rank} item={city}/>
       ))}
     </CardContainer>
   );

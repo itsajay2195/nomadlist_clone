@@ -42,4 +42,5 @@ const TagItem = styled.div`
   filter: saturate(0);
   cursor: cell;
   font-weight: bold;
+  background-color:#181818F2;
 `;

@@ -5,6 +5,7 @@ import Banner from "./components/HomePage/Banner";
 import styled from "styled-components";
 import Tags from "./components/HomePage/Tags";
 import Card from "./components/HomePage/Card";
+import SeachBar from "./components/HomePage/micro/SeachBar";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Banner />
       <div style={{padding:30}}>
         <Publications />
+        <SeachBar/>
         <Tags />
         <Card />
       </div>
@@ -26,4 +28,5 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   width: 100%;
+  background-color:#181818;
 `;

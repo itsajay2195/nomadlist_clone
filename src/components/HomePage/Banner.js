@@ -72,7 +72,6 @@ function Banner() {
         }
         alt="logo"
       ></img>
-      {/* <img style={{height:'100%', width:'100%'}} src={video} alt="" /> */}
     </Container>
   );
 }

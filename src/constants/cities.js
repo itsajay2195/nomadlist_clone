@@ -11,7 +11,8 @@ export const CITIES = [
       {name:'📡 Internet', value:8},
       {name:'😀 fun', value:8},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 2,
@@ -25,7 +26,8 @@ export const CITIES = [
       {name:'📡 Internet', value:5},
       {name:'😀 fun', value:4},
       {name:'👮 Safety', value:7}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 3,
@@ -39,7 +41,8 @@ export const CITIES = [
       {name:'📡 Internet', value:5},
       {name:'😀 fun', value:7},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 4,
@@ -53,7 +56,8 @@ export const CITIES = [
       {name:'📡 Internet', value:8},
       {name:'😀 fun', value:8},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 5,
@@ -67,7 +71,8 @@ export const CITIES = [
       {name:'📡 Internet', value:6},
       {name:'😀 fun', value:7},
       {name:'👮 Safety', value:6}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 6,
@@ -81,7 +86,8 @@ export const CITIES = [
       {name:'📡 Internet', value:5},
       {name:'😀 fun', value:7},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 7,
@@ -95,7 +101,8 @@ export const CITIES = [
       {name:'📡 Internet', value:8},
       {name:'😀 fun', value:9},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 8,
@@ -109,7 +116,8 @@ export const CITIES = [
       {name:'📡 Internet', value:8},
       {name:'😀 fun', value:8},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 9,
@@ -123,7 +131,8 @@ export const CITIES = [
       {name:'📡 Internet', value:7},
       {name:'😀 fun', value:8},
       {name:'👮 Safety', value:7}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 10,
@@ -137,7 +146,8 @@ export const CITIES = [
       {name:'📡 Internet', value:7},
       {name:'😀 fun', value:6},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
   {
     rank: 11,
@@ -151,7 +161,8 @@ export const CITIES = [
       {name:'📡 Internet', value:5},
       {name:'😀 fun', value:3},
       {name:'👮 Safety', value:8}
-    ]
+    ],
+    description:"Definitely a great city live and spend time, Definitely a great city live and spend time"
   },
   {
     rank: 12,
@@ -165,7 +176,8 @@ export const CITIES = [
       {name:'📡 Internet', value:6},
       {name:'😀 fun', value:8},
       {name:'👮 Safety', value:7}
-    ]
+    ],
+    description:"Definitely a great city live and spend time"
   },
 ];
 

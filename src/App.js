@@ -10,9 +10,11 @@ const App = () => {
   return (
     <Container>
       <Banner />
-      <Publications />
-      <Tags />
-      <Card />
+      <div style={{padding:30}}>
+        <Publications />
+        <Tags />
+        <Card />
+      </div>
     </Container>
   );
 };

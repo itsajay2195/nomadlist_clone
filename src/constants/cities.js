@@ -5,11 +5,13 @@ export const CITIES = [
     city: "Bangkok",
     country: "Thailand",
     img: "https://nomadlist.com/assets/img/places/bangkok-thailand.jpg?1674345655",
-    cost: 8,
-    overall: 8,
-    internet: 8,
-    fun: 3,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:8},
+      {name:'💵 Cost', value:8},
+      {name:'📡 Internet', value:8},
+      {name:'😀 fun', value:8},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 2,
@@ -17,11 +19,13 @@ export const CITIES = [
     city: "Buenos Aires",
     country: "Argentina",
     img: "https://nomadlist.com/assets/img/places/buenos-aires-argentina.jpg?1659830443",
-    cost: 7,
-    overall: 9,
-    internet: 9,
-    fun: 9,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:6},
+      {name:'💵 Cost', value:6},
+      {name:'📡 Internet', value:5},
+      {name:'😀 fun', value:4},
+      {name:'👮 Safety', value:7}
+    ]
   },
   {
     rank: 3,
@@ -29,11 +33,13 @@ export const CITIES = [
     city: "Lisbon",
     country: "Portugal",
     img: "https://nomadlist.com/assets/img/places/lisbon-portugal.jpg?1674345656",
-    cost: 5,
-    overall: 6,
-    internet: 7,
-    fun: 7,
-    safety: 7,
+    infoSection:[
+      {name:'⭐️ Overall', value:7},
+      {name:'💵 Cost', value:8},
+      {name:'📡 Internet', value:5},
+      {name:'😀 fun', value:7},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 4,
@@ -41,11 +47,13 @@ export const CITIES = [
     city: "Canggu",
     country: "Bali",
     img: "https://nomadlist.com/assets/img/places/canggu-bali-indonesia.jpg?1673049698",
-    cost: 8,
-    overall: 8,
-    internet: 8,
-    fun: 9,
-    safety: 9,
+    infoSection:[
+      {name:'⭐️ Overall', value:8},
+      {name:'💵 Cost', value:8},
+      {name:'📡 Internet', value:8},
+      {name:'😀 fun', value:8},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 5,
@@ -53,11 +61,13 @@ export const CITIES = [
     city: "Chaing Mai",
     country: "Thailand",
     img: "https://nomadlist.com/assets/img/places/chiang-mai-thailand.jpg?1674691255",
-    cost: 4,
-    overall: 3,
-    internet: 8,
-    fun: 2,
-    safety: 5,
+    infoSection:[
+      {name:'⭐️ Overall', value:6},
+      {name:'💵 Cost', value:7},
+      {name:'📡 Internet', value:6},
+      {name:'😀 fun', value:7},
+      {name:'👮 Safety', value:6}
+    ]
   },
   {
     rank: 6,
@@ -65,11 +75,13 @@ export const CITIES = [
     city: "Mexico City",
     country: "Mexico",
     img: "https://nomadlist.com/assets/img/places/mexico-city-mexico.jpg?1674864062",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:8},
+      {name:'💵 Cost', value:6},
+      {name:'📡 Internet', value:5},
+      {name:'😀 fun', value:7},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 7,
@@ -77,11 +89,13 @@ export const CITIES = [
     city: "Maderia",
     country: "Portugal",
     img: "https://nomadlist.com/assets/img/places/madeira-portugal.jpg?1672704064",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:8},
+      {name:'💵 Cost', value:9},
+      {name:'📡 Internet', value:8},
+      {name:'😀 fun', value:9},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 8,
@@ -89,11 +103,13 @@ export const CITIES = [
     city: "Grah Canaria, Canary Islands",
     country: "Spain",
     img: "https://nomadlist.com/assets/img/places/gran-canaria-canary-islands-spain.jpg?1672876890",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:8},
+      {name:'💵 Cost', value:8},
+      {name:'📡 Internet', value:8},
+      {name:'😀 fun', value:8},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 9,
@@ -101,11 +117,13 @@ export const CITIES = [
     city: "Medellin",
     country: "Colombia",
     img: "https://nomadlist.com/assets/img/places/medellin-colombia.jpg?1674691262",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:7},
+      {name:'💵 Cost', value:6},
+      {name:'📡 Internet', value:7},
+      {name:'😀 fun', value:8},
+      {name:'👮 Safety', value:7}
+    ]
   },
   {
     rank: 10,
@@ -113,11 +131,13 @@ export const CITIES = [
     city: "Tmisoara",
     country: "Romania",
     img: "https://nomadlist.com/assets/img/places/timisoara-romania.jpg?1674691264",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:6},
+      {name:'💵 Cost', value:6},
+      {name:'📡 Internet', value:7},
+      {name:'😀 fun', value:6},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 11,
@@ -125,11 +145,13 @@ export const CITIES = [
     city: "Penang",
     country: "Malaysia",
     img: "https://nomadlist.com/assets/img/places/penang-malaysia.jpg?1674604876",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:7},
+      {name:'💵 Cost', value:8},
+      {name:'📡 Internet', value:5},
+      {name:'😀 fun', value:3},
+      {name:'👮 Safety', value:8}
+    ]
   },
   {
     rank: 12,
@@ -137,11 +159,13 @@ export const CITIES = [
     city: "Bengaluru",
     country: "India",
     img: "https://nomadlist.com/assets/img/places/bengaluru-india.jpg?1662163246",
-    cost: 4,
-    overall: 6,
-    internet: 8,
-    fun: 6,
-    safety: 8,
+    infoSection:[
+      {name:'⭐️ Overall', value:7},
+      {name:'💵 Cost', value:8},
+      {name:'📡 Internet', value:6},
+      {name:'😀 fun', value:8},
+      {name:'👮 Safety', value:7}
+    ]
   },
 ];
 

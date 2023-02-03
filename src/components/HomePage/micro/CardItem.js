@@ -7,7 +7,7 @@ const formrHoverData = (dataset) => {
   let obj1 = [];
   PICK_KEYS.reduce((acc, key) => {
     acc["name"] = key;
-    acc[key] = dataset[key];
+    acc["value"] = dataset[key];
     obj1.push(acc);
     acc = {};
     return acc;
@@ -16,7 +16,7 @@ const formrHoverData = (dataset) => {
 };
 const CardItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [onHoverDataSet] = useState(formrHoverData(item));
+  // const [onHoverDataSet] = useState(formrHoverData(item));
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -37,7 +37,7 @@ const CardItem = ({ item }) => {
 
       <>
         {isHovered ? (
-          <HoveredItem onHoverDataSet={onHoverDataSet} />
+          <HoveredItem onHoverDataSet={item.infoSection} />
         ) : (
           <DefaultItem item={item} />
         )}
@@ -64,11 +64,10 @@ const HoveredItem = ({ onHoverDataSet }) => {
               }}
             >
               <div style={{display:'flex', flex:0.5, flexDirection:'row'}}>
-              <P style={{color:'white'}}>{data.name}</P>
-              <P style={{color:'white'}}>{data.name}</P>
+              <P style={{fontWeight:'100'}} fontSize={"20px"} >{data.name}</P>
               </div>
               <div >
-              <ProgressBar percentage={25} />
+              <ProgressBar percentage={(data.value * 100)/10}  />
               </div>
               
             </div>

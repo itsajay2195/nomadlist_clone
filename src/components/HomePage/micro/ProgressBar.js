@@ -1,10 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProgressBar = ({percentage}) => {
+const colorIndicator = (data) => {
+    
+    if (data <= 50) {
+      return "red";
+    } else if (data <= 70) {
+      return "yellow";
+    } else {
+      return "#4caf50";
+    }
+  };
+const ProgressBar = ({ percentage }) => {
   return (
     <ProgressBarContainer>
-      <Progress percentage={percentage} />
+      <Progress
+        percentage={percentage}
+        barColor={() => colorIndicator(percentage)}
+      />
     </ProgressBarContainer>
   );
 };
@@ -23,6 +36,6 @@ const ProgressBarContainer = styled.div`
 const Progress = styled.div`
   height: 100%;
   width: ${(props) => props.percentage}%;
-  background-color: #4caf50;
+  background-color: ${(props) => props.barColor};
   border-radius: 10px;
 `;

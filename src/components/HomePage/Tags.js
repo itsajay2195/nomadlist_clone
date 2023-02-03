@@ -34,7 +34,7 @@ const Container = styled.div`
 
 const TagItem = styled.div`
   background-color: transparent;
-  padding:10px;
+  padding:8px;
   margin: 7px;
   border-radius: 32px;
   border: dashed 2px #30363d;

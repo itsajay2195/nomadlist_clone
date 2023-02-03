@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 
-const colorIndicator = (data) => {
-    
-    if (data <= 50) {
-      return "red";
-    } else if (data <= 70) {
-      return "yellow";
-    } else {
-      return "#4caf50";
-    }
-  };
+
 const ProgressBar = ({ percentage }) => {
+    const colorIndicator = useCallback(() => {
+        if (percentage <= 50) {
+          return "red";
+        } else if (percentage <= 70) {
+          return "yellow";
+        } else {
+          return "#4caf50";
+        }
+      },[percentage]);
   return (
     <ProgressBarContainer>
       <Progress
         percentage={percentage}
-        barColor={() => colorIndicator(percentage)}
+        barColor={colorIndicator}
       />
     </ProgressBarContainer>
   );

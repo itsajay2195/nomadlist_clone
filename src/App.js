@@ -7,6 +7,7 @@ import Tags from "./components/HomePage/Tags";
 import Card from "./components/HomePage/Card";
 import SeachBar from "./components/HomePage/micro/SeachBar";
 import { SEARCH_MODAL_DATA } from "./constants/cities";
+
 const App = () => {
  
   return (

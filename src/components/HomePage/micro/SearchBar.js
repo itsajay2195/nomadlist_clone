@@ -5,7 +5,7 @@ import SearchModalListITem from "./SearchModalListITem";
 const FilterContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 10px 0 ;
+  margin: 10px 20px ;
   padding: 2px;
   border: 2px solid gray;
   border-radius: 50px;
@@ -60,7 +60,7 @@ max-width: auto;
 
 
 
-const SeachBar = ({ data }) => {
+const SearchBar = ({ data }) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -68,6 +68,7 @@ const SeachBar = ({ data }) => {
   const handleSearch = useCallback((text) => {
     setSearchText(text)
   }, [])
+
   const handleFilter = useCallback(() => {
     setIsModalOpen(!isModalOpen)
   }, [isModalOpen]);
@@ -80,10 +81,11 @@ const SeachBar = ({ data }) => {
     dataColumns.push(data.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn));
   }
 
+
   return (
     <>
       <FilterContainer onClick={handleFilter}>
-        <Input  type="text" placeholder="Search" onChange={handleSearch} />
+        <Input type="text" placeholder="Search" onChange={handleSearch} />
         <Button onClick={handleFilter}>+</Button>
       </FilterContainer>
       <>
@@ -91,13 +93,12 @@ const SeachBar = ({ data }) => {
           <ModalContainer>
             <Modal>
               {dataColumns.map((columnData, index) => (
-                <div key={index} style={{  borderRight: index === dataColumns.length-1? "none" : '0.25px solid black'}}>
+                <div key={index} style={{ borderRight: index === dataColumns.length - 1 ? "none" : '0.25px solid black' }}>
                   {columnData.map(({ value }, itemIndex) => (
-                    <SearchModalListITem key={itemIndex}  value={value}/>
+                    <SearchModalListITem key={itemIndex} value={value} />
                   ))}
                 </div>
               ))}
-              {/* <Input type="text" placeholder="Enter search term" /> */}
             </Modal>
           </ModalContainer>
         )}
@@ -106,4 +107,4 @@ const SeachBar = ({ data }) => {
   );
 };
 
-export default SeachBar;
+export default SearchBar;

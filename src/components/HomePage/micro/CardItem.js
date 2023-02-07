@@ -4,7 +4,6 @@ import ProgressBar from "./ProgressBar";
 
 const CardItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
-  // const [onHoverDataSet] = useState(formrHoverData(item));
   const handleMouseEnter = () => {
     setIsHovered(true);
   };

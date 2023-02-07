@@ -9,6 +9,7 @@ function Banner() {
           position: "absolute",
           display: "flex",
           flexDirection: "row",
+          maxHeight:0,
           zIndex: 1,
           top: 20,
           left: 50,
@@ -21,7 +22,6 @@ function Banner() {
             position: "relative",
             height: 30,
             width: 30,
-            borderRadius: "100%",
           }}
         >
           <svg
@@ -64,7 +64,6 @@ function Banner() {
           </svg>
         </div>
       </div>
-      <span></span>
       <img
         style={{ height: "100%", width: "100%", objectFit: "resize" }}
         src={

@@ -62,7 +62,7 @@ max-width: auto;
 
 const SeachBar = ({ data }) => {
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchText, setSearchText] = useState("");
 
   const handleSearch = useCallback((text) => {

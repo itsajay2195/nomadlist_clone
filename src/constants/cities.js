@@ -179,6 +179,65 @@ export const CITIES = [
     ],
     description: "Definitely a great city live and spend time"
   },
+  {
+    rank: 13,
+    internetSpeed: 33,
+    city: "Bengaluru",
+    country: "India",
+    img: "https://nomadlist.com/assets/img/places/bengaluru-india.jpg?1662163246",
+    infoSection: [
+      { name: '⭐️ Overall', value: 7 },
+      { name: '💵 Cost', value: 8 },
+      { name: '📡 Internet', value: 6 },
+      { name: '😀 fun', value: 8 },
+      { name: '👮 Safety', value: 7 }
+    ],
+    description: "Definitely a great city live and spend time"
+  },
+  {
+    rank: 14,
+    internetSpeed: 33,
+    city: "Bengaluru",
+    country: "India",
+    img: "https://nomadlist.com/assets/img/places/bengaluru-india.jpg?1662163246",
+    infoSection: [
+      { name: '⭐️ Overall', value: 7 },
+      { name: '💵 Cost', value: 8 },
+      { name: '📡 Internet', value: 6 },
+      { name: '😀 fun', value: 8 },
+      { name: '👮 Safety', value: 7 }
+    ],
+    description: "Definitely a great city live and spend time"
+  },
+  {
+    rank: 15,
+    internetSpeed: 33,
+    city: "Bengaluru",
+    country: "India",
+    img: "https://nomadlist.com/assets/img/places/bengaluru-india.jpg?1662163246",
+    infoSection: [
+      { name: '⭐️ Overall', value: 7 },
+      { name: '💵 Cost', value: 8 },
+      { name: '📡 Internet', value: 6 },
+      { name: '😀 fun', value: 8 },
+      { name: '👮 Safety', value: 7 }
+    ],
+    description: "Definitely a great city live and spend time"
+  },  {
+    rank: 16,
+    internetSpeed: 33,
+    city: "Bengaluru",
+    country: "India",
+    img: "https://nomadlist.com/assets/img/places/bengaluru-india.jpg?1662163246",
+    infoSection: [
+      { name: '⭐️ Overall', value: 7 },
+      { name: '💵 Cost', value: 8 },
+      { name: '📡 Internet', value: 6 },
+      { name: '😀 fun', value: 8 },
+      { name: '👮 Safety', value: 7 }
+    ],
+    description: "Definitely a great city live and spend time"
+  }
 ];
 
 export const PUBLICATION_CONSTANT = [

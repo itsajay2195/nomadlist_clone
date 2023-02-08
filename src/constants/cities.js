@@ -300,3 +300,17 @@ export const SEARCH_MODAL_DATA = [
   { key: 21, value: "🏄 Oceania " },
   { key: 22, value: "🌍 Africa " },
   { key: 23, value: "🕌 Middle East" }]
+
+
+export const AVATAR = [
+  {key: 1, color: "red"},
+  {key: 2, color: "blue"},
+  {key: 3, color: "green"},
+  {key: 4, color: "purple"},
+  {key: 5, color: "yellow"},
+  {key: 6, color: "orange"},
+  {key: 7, color: "brown"},
+  {key: 8, color: "pink"},
+  {key: 9, color: "gray"},
+  {key: 10, color: "black"}
+];

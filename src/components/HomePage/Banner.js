@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Emoji from "../CommonComponents/Emoji"
+import { AVATAR } from "../../constants/cities";
 
 function Banner() {
   return (
@@ -9,7 +11,7 @@ function Banner() {
           position: "absolute",
           display: "flex",
           flexDirection: "row",
-          maxHeight:0,
+          maxHeight: 0,
           zIndex: 1,
           top: 20,
           left: 50,
@@ -64,6 +66,9 @@ function Banner() {
           </svg>
         </div>
       </div>
+
+
+
       <img
         style={{ height: "100%", width: "100%", objectFit: "resize" }}
         src={
@@ -71,17 +76,48 @@ function Banner() {
         }
         alt="logo"
       ></img>
+      <BrandInfo />
     </Container>
   );
 }
 
+const BrandInfo = () => {
+  return (
+    <div style={{ position: "absolute", display: "flex", flexDirection: "column", marginLeft:"20%",height: "50%", width: "60%", justifyContent: "center"}}>
+      <div style={{display:"flex", alignItems:"center"}}>
+      <Emoji symbol="🌍" size="3em" />
+      <h1 style={{color:"white", fontSize:"40px"}}>Go nomad</h1>
+      </div>
+
+      <p style={{color:"white",fontSize:"25px"}}>
+        Join a global of remote workers living and traveling around the world
+      </p>
+
+      <div style={{display:"flex",marginTop:"10px",flexDirection:"row-reverse",marginLeft:0,justifyContent:"flex-end"}}>
+        
+        {AVATAR.map(item=>(
+        <div ley={item.key} style={{marginRight:-10}}>
+         <Avatar  color={item.color}/>
+        </div>
+        ))}
+      </div>
+
+
+   
+    </div>
+  )
+}
+
+const Avatar =({color})=>(
+  <div style={{height:"30px", width:"30px", borderRadius:"50px", backgroundColor:color}}>   
+  </div>
+)
 export default Banner;
 
 const Container = styled.div`
   height: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   z-index: 1;
 `;

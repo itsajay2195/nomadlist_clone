@@ -2,30 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Emoji from "../CommonComponents/Emoji"
 import { AVATAR } from "../../constants/cities";
+import BrandInfo from "./micro/BrandInfo";
 
 function Banner() {
   return (
     <Container>
-      <div
-        style={{
-          position: "absolute",
-          display: "flex",
-          flexDirection: "row",
-          maxHeight: 0,
-          zIndex: 1,
-          top: 20,
-          left: 50,
-          bottom: 0,
-          right: 0,
-        }}
-      >
-        <div
-          style={{
-            position: "relative",
-            height: 30,
-            width: 30,
-          }}
-        >
+      <StyledDiv>
+        <InnerDiv>
           <svg
             height="30"
             width="30"
@@ -49,23 +32,17 @@ function Banner() {
               fill="red"
             ></path>
           </svg>
-        </div>
+        </InnerDiv>
 
-        <div>
-          <svg
-            width="25"
-            height="25"
+        <InvertedArrowDiv>
+          <InvertedarrowSvg
             viewBox="0 0 24 24"
-            fill="white"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M7.41 8.59L12 13.17L16.59 8.59L18 10L12 16L6 10L7.41 8.59Z"
-              fill="#fff"
-            />
-          </svg>
-        </div>
-      </div>
+            <path d="M7.41 8.59L12 13.17L16.59 8.59L18 10L12 16L6 10L7.41 8.59Z" fill="#fff" />
+          </InvertedarrowSvg>
+        </InvertedArrowDiv>
+      </StyledDiv>
 
 
 
@@ -76,42 +53,13 @@ function Banner() {
         }
         alt="logo"
       ></img>
-      <BrandInfo />
+      <BrandInfo avatars={AVATAR} />
     </Container>
   );
 }
 
-const BrandInfo = () => {
-  return (
-    <div style={{ position: "absolute", display: "flex", flexDirection: "column", marginLeft:"20%",height: "50%", width: "60%", justifyContent: "center"}}>
-      <div style={{display:"flex", alignItems:"center"}}>
-      <Emoji symbol="🌍" size="3em" />
-      <h1 style={{color:"white", fontSize:"40px"}}>Go nomad</h1>
-      </div>
-
-      <p style={{color:"white",fontSize:"25px"}}>
-        Join a global of remote workers living and traveling around the world
-      </p>
-
-      <div style={{display:"flex",marginTop:"10px",flexDirection:"row-reverse",marginLeft:0,justifyContent:"flex-end"}}>
-        
-        {AVATAR.map(item=>(
-        <div ley={item.key} style={{marginRight:-10}}>
-         <Avatar  color={item.color}/>
-        </div>
-        ))}
-      </div>
 
 
-   
-    </div>
-  )
-}
-
-const Avatar =({color})=>(
-  <div style={{height:"30px", width:"30px", borderRadius:"50px", backgroundColor:color}}>   
-  </div>
-)
 export default Banner;
 
 const Container = styled.div`
@@ -122,3 +70,36 @@ const Container = styled.div`
   z-index: 1;
 `;
 
+
+
+const StyledDiv = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  max-height: 0;
+  z-index: 1;
+  top: 20px;
+  left: 50px;
+  bottom: 0;
+  right: 0;
+`;
+
+const InnerDiv = styled.div`
+  position: relative;
+  height: 30px;
+  width: 30px;
+`;
+
+const InvertedArrowDiv = styled.div`
+width: 25px;
+height: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+`;
+
+const InvertedarrowSvg = styled.svg`
+width: 25px;
+height: 25px;
+fill: white;
+`;

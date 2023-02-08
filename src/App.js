@@ -12,11 +12,14 @@ const App = () => {
 
   return (
     <Container>
-      <Banner />
-      <Publications />
-      <SearchBar data={SEARCH_MODAL_DATA} />
-      <Tags />
-      <Card />
+       <Banner />
+      <Body >
+        <Publications />
+        <SearchBar data={SEARCH_MODAL_DATA} />
+        <Tags />
+        <Card />
+      </Body>
+
 
     </Container>
   );
@@ -32,6 +35,9 @@ const Container = styled.div`
   background-color:#181818;
 `;
 
+const Body = styled.div`
+  padding:30px;
+`
 
 
 

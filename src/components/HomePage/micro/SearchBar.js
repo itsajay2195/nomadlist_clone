@@ -5,61 +5,56 @@ import SearchModalListITem from "./SearchModalListITem";
 const FilterContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 10px 20px ;
+  margin: 10px 0px;
   padding: 2px;
   border: 2px solid gray;
   border-radius: 50px;
-  width: 15%;
+  width: 100%;
+  @media (min-width: 720px) {
+    width: 15%;
+  }
 `;
 
 const Input = styled.input`
   padding: 5px 10px;
   font-size: 16px;
-  width:80%;
+  width: 80%;
   border: 0px solid gray;
   border-radius: 10px;
   background-color: inherit;
-  margin : 0px 10px 0px 0px;
+  margin: 0px 10px 0px 0px;
   height: 40px;
-  outline:none;
-  
+  outline: none;
 `;
 
 const Button = styled.button`
   font-size: 28px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   background-color: #ff4742;
   border: none;
-  height:35px;
-  width:35px;
+  height: 35px;
+  width: 35px;
   border-radius: 50px;
 `;
 
 const ModalContainer = styled.div`
-position: absolute;
-z-index:1;
-display: flex;
-justify-content: center;
-align-items: center;
-
+  position: absolute;
+  z-index: 1;
+  display: flex;
 `;
 
 const Modal = styled.div`
-background-color: #181818F2;
-display:flex;
-border-radius: 5px;
-border: 1px solid black;
-padding: 0px 20px;
-height:auto;
-max-width: auto;
-
+  background-color: #181818F2;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0px 20px;
+  height: auto;
+  max-width: auto;
 `;
-
-
-
 const SearchBar = ({ data }) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);

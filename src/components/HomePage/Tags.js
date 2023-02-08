@@ -28,7 +28,7 @@ const Container = styled.div`
   position:relative;
   flex: wrap;
   display:flex;
-  margin:10px 20px;
+  margin:10px 0px;
   zIndex:10;
 `;
 

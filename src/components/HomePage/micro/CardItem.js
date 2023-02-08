@@ -319,30 +319,3 @@ const OneLineParagraph = styled.p`
   color: white;
   width: calc(60% - 14px);
 `;
-
-const TooltipSpan = styled.span`
-  position: relative;
-  &::before {
-    content: attr(data-tooltip);
-    display: none;
-    position: absolute;
-    top: calc(100% + 5px);
-    left: -50%;
-    transform: translate(-50%, 0);
-    background-color: #181818F2;
-    color: white;
-    padding: 5px 10px;
-    width:200px;
-    height:25px;
-    border-radius: 5px;
-    font-size: 10px;
-    z-index:1;
-    border-radius:10px;
-    opacity: 0.75 ;
-  filter:  saturate(0%) brightness(1);
-  }
-
-  &:hover::before {
-    display: block;
-  }
-`;
